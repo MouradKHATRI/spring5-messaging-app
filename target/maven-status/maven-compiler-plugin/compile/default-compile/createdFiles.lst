@@ -1,0 +1,8 @@
+mkhatri\model\mappers\UserRowMapper.class
+mkhatri\controllers\HomeController.class
+mkhatri\dao\UserRepository.class
+MessagingApp.class
+mkhatri\model\User.class
+mkhatri\model\UserRole.class
+mkhatri\model\Permission.class
+mkhatri\model\Role.class

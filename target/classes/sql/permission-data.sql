@@ -1,0 +1,1 @@
+insert into permission (id, user_role_id, permission, created_at) values (1, 1, 'creation','2021-03-02 18:01');
