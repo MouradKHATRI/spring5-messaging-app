@@ -24,6 +24,10 @@ public class UserRoleService {
         transactionTemplate = new TransactionTemplate(transactionManager);
     }
 
+    public void addUserRole(UserRole userRole) {
+        userRoleRepository.update(userRole);
+    }
+
     public List<UserRole> findAll() {
         List<UserRole> userList = transactionTemplate.execute(transactionStatus -> {
                     return userRoleRepository.findAll();

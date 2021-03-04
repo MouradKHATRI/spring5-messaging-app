@@ -1,3 +1,5 @@
+import mkhatri.model.Role;
+import mkhatri.model.User;
 import mkhatri.service.PermissionService;
 import mkhatri.service.RoleService;
 import mkhatri.service.UserRoleService;
@@ -30,7 +32,21 @@ public class MessagingApp {
         //System.out.println("User list : " + userService.findAll());
         //System.out.println("Role list : " + roleService.findAll());
         //System.out.println("Permissions list : " + permissionService.findAll());
-        System.out.println("UsersRoles list : " + userRoleService.findAll());
+
+       // userService.addUser(createUser());
+
+        System.out.println("User list : " + userService.findAll());
+        //System.out.println("UsersRoles list : " + userRoleService.findAll());
+    }
+
+    private static User createUser() {
+        User user = new User();
+        user.setPassword("App_pass");
+        user.setLogin("App_login");
+        Role role = new Role();
+        role.setName("tstRo");
+        user.setRoles(Arrays.asList(role));
+        return user;
     }
 
     @Bean

@@ -15,6 +15,10 @@ public class RoleService {
     @Autowired
     private RoleRepository roleRepository;
 
+    public void addRole(Role role) {
+        roleRepository.update(role);
+    }
+
     public List<Role> findAll() {
         return roleRepository.findAll();
     }
